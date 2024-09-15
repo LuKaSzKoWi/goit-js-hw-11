@@ -137,3 +137,12 @@ margin: 0;
   font-weight: bold;
   color: #333;
 }
+
+.hidden {
+  display: none;
+}
+
+#loader {
+  text-align: center;
+  padding: 20px;
+}

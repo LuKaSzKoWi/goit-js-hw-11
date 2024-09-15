@@ -20,12 +20,15 @@ form.addEventListener('submit', async (e) => {
         });
         return;
     }
-
+   clearGallery();
+  showLoader();
     
 
     try {
         const response = await axios.get(`https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(query)}&image_type=photo&orientation=horizontal&safesearch=true`);
         const images = response.data.hits;
+
+        hideLoader();
 
         if (images.length === 0) {
             iziToast.info({
